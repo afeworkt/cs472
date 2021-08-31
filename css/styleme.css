@@ -1,0 +1,14 @@
+body{
+    background-color: #57554e;
+    color:#ffffff;
+}
+h1,h2,h3{
+    color: #9bc6f4;
+}
+  .header-container {
+    margin: 60px 0px 0px 0px;
+    background-color: #57554e;
+    padding: 0 20px 20px;
+    text-align: center;
+    color: #ffffff;
+  }
