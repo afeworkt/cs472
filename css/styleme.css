@@ -1,6 +1,7 @@
 body{
     background-color: #57554e;
     color:#ffffff;
+    font-family:  Tahoma, "Courier New", "Times New Roman"
 }
 h1,h2,h3{
     color: #9bc6f4;
@@ -12,3 +13,12 @@ h1,h2,h3{
     text-align: center;
     color: #ffffff;
   }
+li a:link{
+  color: #b03c3c;
+}
+li a:visited{
+    color: #c43636;
+  }
+p strong{
+    color: #e9e98e;
+}
