@@ -2,10 +2,12 @@ body{
     color: #404040;
     background-color: #FFFFFF;
     font-size: 11pt;
-    font-family: 'Georgia', 'Garamond';
+    font-family: Georgia, Garamond;
     padding-left: 20px;
     padding-right: 20px;
+    background: url('https://afeworkt.github.io/cs472/22recipe/images/silverware.jpg');
 }
+
 h1,h2,h3{
     background-color:#F0F0F0;
     color: #A4A400;
@@ -26,4 +28,22 @@ a{
 }
 .spanstrok{
     text-decoration: line-through;
+}
+
+.user-comments .detail {
+    margin-left: 50px;
+}
+
+.user-comments .detail .content {
+    background-color:#FFFFA8 ;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: url('https://afeworkt.github.io/cs472/22recipe/images/pie_bullet.png');
+    padding-left: 5px;
 }
