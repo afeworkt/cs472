@@ -11,10 +11,17 @@ body {
     color: #626377;
   }
   
-  .container ul {
-      /* since ul element is block-level element and it will still hold the whole section even if centered */
+   .container ul {
+       /* since ul element is block-level element and it will still hold the whole section even if centered  */
       display: inline-block;
-  }
+      text-align: left;
+  } 
+  /* li {
+    display:block;
+    position:relative;
+    padding:3px;
+    border:#000 1px solid;
+  } */
   
   a {
       text-decoration: none;
