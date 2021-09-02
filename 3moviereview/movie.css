@@ -98,13 +98,13 @@ div.leftside .content {
 }
 
 .content .cols {
-    height: 1000px; 
+    min-height: 1000px; 
 }
 
 .content .review  p.article{
     border: 2px solid #6b776b;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     background-color: #e7dc9a;
     /* font-weight:bold; */
 }
