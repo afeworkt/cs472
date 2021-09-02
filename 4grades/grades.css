@@ -1,0 +1,58 @@
+body h1{
+    text-align: center;
+}
+label {
+    float: left;
+    width: 120px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+span {
+    display: block;
+    overflow: hidden;
+    /* padding: 0 4px 0 6px */
+}
+input {
+    width: 95%;
+    line-height: 2em;
+    border:1px solid silver ;
+    border-radius: 4px;
+    border-color:silver;
+
+}
+select {
+    width: 95.7%;
+    /* height: 20px; */
+    /* line-height: 2.5em; */
+    border-color:silver;
+    border-radius: 4px;
+    padding: 5px;
+    background-image:none\9;
+    padding: 5px\9;
+}
+.checkbox , .radio{
+    display: inline-block;
+    width: 24px;
+}
+p.button-container{
+    padding-left: 150px;
+}
+p.button-container > label{
+    padding-left: 0px;
+    width: auto;
+}
+.button {
+    background-color: darkcyan; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .validators {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
