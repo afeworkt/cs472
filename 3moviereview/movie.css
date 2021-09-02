@@ -68,11 +68,11 @@ aside dl ul {
     display: initial;
 }
 
-.container section {
+.container div.leftside {
     width: 70%;
 }
 
-.container > section .header {
+.container > div.leftside .header {
     background-image: url('images/rbg.png');
     border-top-left-radius: 28px;
     height: 85px;
@@ -81,17 +81,17 @@ aside dl ul {
     font-weight: bold;
 }
 
-section .header img {
+div.leftside .header img {
     border-top-left-radius: 28px;
     height: 85px;
     margin-right: 10px;
 }
 
-section .header * {
+div.leftside .header * {
     float: left;
 }
 
-section .content {
+div.leftside .content {
     column-count: 2;
     column-gap: 10px;
     padding: 10px;
