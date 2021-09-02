@@ -27,8 +27,8 @@ select {
     border-color:silver;
     border-radius: 4px;
     padding: 5px;
-    background-image:none\9;
-    padding: 5px\9;
+    background-image:none;
+    padding: 5px;
 }
 .checkbox , .radio{
     display: inline-block;
