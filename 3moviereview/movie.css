@@ -33,7 +33,7 @@ body > h1 {
     z-index: -100;
 }
 
-.container aside {
+.container div.rightside {
     width: 30%;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -45,7 +45,7 @@ body > h1 {
     font-size: 12px;
 }
 
-.container aside img {
+.container div.rightside img {
     width: 100%;
     border-top-right-radius: 28px;
 }
@@ -55,15 +55,15 @@ body > h1 {
     color: #424e49;
 }
 
-.container aside dt {
+.container div.rightside dt {
     font-weight: bold;
 }
 
-.container aside dd {
+.container div.rightside dd {
     margin-bottom: 15px;
 }
 
-aside dl ul {
+div.rightside dl ul {
     list-style-type: none;
     display: initial;
 }
