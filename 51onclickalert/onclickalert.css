@@ -1,0 +1,32 @@
+.container {
+    width: 500px;
+    background-color: #fff;
+    padding: 0 20px 20px;
+    color: #626377;
+    margin: 120px auto 120px;
+}
+
+fieldset{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ebebeb;
+    box-shadow: 1px 2px 2px 1px #dedada;
+    text-align: left;
+}
+
+fieldset legend {
+    background: #fff;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 2px 1px #8e8484;
+}
+
+.click-me-button {
+    padding: 10px 24px;
+    background-color: darkcyan;
+    border: 1px solid darkcyan;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
