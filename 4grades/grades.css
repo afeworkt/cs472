@@ -44,3 +44,6 @@ body h1{
   .validators {
       text-align: center;
 }
+.validators a{
+    text-decoration: none;
+}
