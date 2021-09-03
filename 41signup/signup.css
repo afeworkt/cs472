@@ -25,34 +25,10 @@ body h1{
     background: #feaaa9;
 }
 
-.form-body .hint {
+.form-body .hint, footer .back {
     color: #e25e5c;
     margin-left: 5px;
 }
-
-/* .form .form-body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "label1 input1"
-                         "label2 input2";
-    grid-row-gap: 10px;
-} */
-/* 
-.form-body .label-name {
-    grid-area: label1;
-}
-
-.form-body .label-id {
-    grid-area: label2;
-}
-
-.form-body .input-name {
-    grid-area: input1;
-}
-
-.form-body .input-id {
-    grid-area: input2;
-} */
 
 fieldset{
     border-radius: 5px;
@@ -71,13 +47,14 @@ fieldset legend {
 
 .container {
     width: 500px;
-    margin: 120px auto 120px;
     background-color: #fff;
     padding: 0 20px 20px;
-    text-align: center;
     color: #626377;
 }
 
-.validators {
-    float: right;
+footer a, div.form-body a{
+    height: 24px;
+    display: inline-flex;
+    text-decoration: none;
+
 }

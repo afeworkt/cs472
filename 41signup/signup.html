@@ -9,69 +9,88 @@
 
 <body>
     <div class="container">
+        <header>
+            <img src="assets/img/logo.png" alt="logo" width="100px">
+        </header>
         <fieldset>
             <legend>New User Signup:</legend>
             <form class="form" action="http://mumstudents.org/params.php">
-            <div class="form-body">
-                <label for="sname" class="form-label">Name:</label>
-                <input type="text" id="sname" name="sname" class="form-input"  maxlength="16">
-            </div>
-            <div class="form-body">
-                <span class="form-label">Gender</span>
-                <div class="form-input">
-                    <input type="radio" id="may2021" name="entry" value="may2021" class="radio">
-                    <label for="feb2021" class="radio-inline">Male</label>
-                    <input type="radio" id="dec2021" name="entry" value="dec2021" class="radio">
-                    <label for="may2021" class="radio-inline">Female</label>
+                <div class="form-body">
+                    <label for="sname" class="form-label">Name:</label>
+                    <input type="text" id="sname" name="sname" class="form-input" maxlength="16">
                 </div>
-            </div>
-            <div class="form-body">
-               <label for="age" class="form-label">Age:</label>
-               <input type="text" id="age" name="age">
-            </div>
-            <div class="form-body">
-                <label for="p-type" class="form-label">Personality type:</label>
-                <input type="text" id="p-type" name="ptype">
-                <span class="hint">(Don't know your type?)</span>
-             </div>
-             <div class="form-body">
-                <label for="favorite" class="form-label">Favorite OS:</label>
-                <select>
-                    <option value="window">
-                        Window
-                    </option>
-                    <option value="mac-os">
-                        Mac OS
-                    </option>
-                </select>
-             </div>
-             <div class="form-body">
-                <label for="p-type" class="form-label">Seeking age:</label>
-                <div>
-                    <input type="text" class="min" placeholder="min">
-                    <span>to</span>
-                    <input type="text" class="max" placeholder="max">
+                <div class="form-body">
+                    <span class="form-label">Gender</span>
+                    <div class="form-input">
+                        <input type="radio" id="male" name="gender" value="male" class="radio">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" class="radio">
+                        <label for="female">Female</label>
+                    </div>
                 </div>
-             </div>
-             <div class="form-body">
-                 <button>
-                     Sign Up
-                </button>
-             </div>
-        </form>
-    </fieldset>
-</div>
-    <div class="validators">
-        <a href="https://validator.w3.org/check?uri=https://afeworkt.github.io/cs472/41signup/signup.html">
-            <img src="https://afeworkt.github.io/cs472/images/w3c-html.png" alt="html validator" />
-        </a>
-        <br />
-        <a
-            href="http://jigsaw.w3.org/css-validator/validator?uri=https://afeworkt.github.io/cs472/41signup/signup.css">
-            <img src="https://afeworkt.github.io/cs472/images/w3c-css.png" alt="css validator" />
-        </a>
+                <div class="form-body">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="text" id="age" name="age"  maxlength="2">
+                </div>
+                <div class="form-body">
+                    <label for="ptype" class="form-label">Personality type:</label>
+                    <input type="text" id="ptype" name="ptype"  minlength="4" maxlength="6">
+                    <a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp"><span class="hint">(Don't know your
+                            type?)</span></a>
+                </div>
+                <div class="form-body">
+                    <label for="favorite" class="form-label">Favorite OS:</label>
+                    <select>
+                        <option value="window" selected="true">
+                            Windows
+                        </option>
+                        <option value="mac-os">
+                            Mac OS X
+                        </option>
+                        <option value="Linux">
+                            Linux
+                        </option>
+                    </select>
+                </div>
+                <div class="form-body">
+                    <label for="p-type" class="form-label">Seeking age:</label>
+                    <div>
+                        <input type="text" class="min" placeholder="min"  maxlength="2">
+                        <span>to</span>
+                        <input type="text" class="max" placeholder="max" maxlength="2">
+                    </div>
+                </div>
+                <div class="form-body">
+                    <button>
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+        </fieldset>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum perferendis corporis ducimus?
+            Veritatis iste, ab omnis perspiciatis rem cum quaerat corporis magnam labore perferendis deserunt tenetur
+            autem ipsum expedita!
+        </p>
+        <p>
+            Results and page (C) Copyright Nerdluv Inc.
+        </p>
+        <footer>
+            <a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">
+                <img src="assets/img/back.png" alt="back" width="24px" height="24px">
+                <span class="back">Back to front page</span>
+            </a>
+        </footer>
+        <div class="validators">
+            <a href="https://validator.w3.org/check?uri=https://afeworkt.github.io/cs472/41signup/signup.html">
+                <img src="https://afeworkt.github.io/cs472/images/w3c-html.png" alt="html validator" />
+            </a>
+            <a
+                href="http://jigsaw.w3.org/css-validator/validator?uri=https://afeworkt.github.io/cs472/41signup/signup.css">
+                <img src="https://afeworkt.github.io/cs472/images/w3c-css.png" alt="css validator" />
+            </a>
+        </div>
     </div>
-
 </body>
 
 </html>
