@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nerdluv Sign-up</title>
+    <meta charset="utf-8" />
+    <link href="signup.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>New User Signup:</legend>
+            <form class="form" action="http://mumstudents.org/params.php">
+            <div class="form-body">
+                <label for="sname" class="form-label">Name:</label>
+                <input type="text" id="sname" name="sname" class="form-input"  maxlength="16">
+            </div>
+            <div class="form-body">
+                <span class="form-label">Gender</span>
+                <div class="form-input">
+                    <input type="radio" id="may2021" name="entry" value="may2021" class="radio">
+                    <label for="feb2021" class="radio-inline">Male</label>
+                    <input type="radio" id="dec2021" name="entry" value="dec2021" class="radio">
+                    <label for="may2021" class="radio-inline">Female</label>
+                </div>
+            </div>
+            <div class="form-body">
+               <label for="age" class="form-label">Age:</label>
+               <input type="text" id="age" name="age">
+            </div>
+            <div class="form-body">
+                <label for="p-type" class="form-label">Personality type:</label>
+                <input type="text" id="p-type" name="ptype">
+                <span class="hint">(Don't know your type?)</span>
+             </div>
+             <div class="form-body">
+                <label for="favorite" class="form-label">Favorite OS:</label>
+                <select>
+                    <option value="window">
+                        Window
+                    </option>
+                    <option value="mac-os">
+                        Mac OS
+                    </option>
+                </select>
+             </div>
+             <div class="form-body">
+                <label for="p-type" class="form-label">Seeking age:</label>
+                <div>
+                    <input type="text" class="min" placeholder="min">
+                    <span>to</span>
+                    <input type="text" class="max" placeholder="max">
+                </div>
+             </div>
+             <div class="form-body">
+                 <button>
+                     Sign Up
+                </button>
+             </div>
+        </form>
+    </fieldset>
+</div>
+    <div class="validators">
+        <a href="https://validator.w3.org/check?uri=https://afeworkt.github.io/cs472/41signup/signup.html">
+            <img src="https://afeworkt.github.io/cs472/images/w3c-html.png" alt="html validator" />
+        </a>
+        <br />
+        <a
+            href="http://jigsaw.w3.org/css-validator/validator?uri=https://afeworkt.github.io/cs472/41signup/signup.css">
+            <img src="https://afeworkt.github.io/cs472/images/w3c-css.png" alt="css validator" />
+        </a>
+    </div>
+
+</body>
+
+</html>
