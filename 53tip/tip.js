@@ -4,8 +4,6 @@ function calcTip() {
 	var totalElem = document.getElementById('total');
 	var subtotal = parseFloat(subtotalElem.value);
 	var tip = (subtotal * parseFloat(tipElem.value))/100;
-    console.log(tip);
-    console.log(subtotal);
     if(isNaN(tip)||isNaN(subtotal)){
         alert("Please enter a valid value!");
         tipElem.value='';
