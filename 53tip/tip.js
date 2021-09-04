@@ -13,13 +13,7 @@ function calcTip() {
 	    totalElem.innerHTML = '$';
         return;
     }
-    if(tip>subtotal){
-        alert("Tip can not exceed the subtotal!");
-        tipElem.value='';
-	    totalElem.innerHTML = '$';
-        return;
-    }else{
-	    var total = subtotal+tip;
-	    totalElem.innerHTML = '$' + total;
-    }
+   
+    var total = subtotal+tip;
+    totalElem.innerHTML = '$' + total;
 }
