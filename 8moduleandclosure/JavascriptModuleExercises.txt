@@ -171,9 +171,6 @@ Module=(function(){
         this.setAge(newAge);
     }
     return {
-        getName:getName,
-        getAge:getAge,
-        getSalary:getSalary,
         setName:setName,
         setAge:setAge,
         setSalary:setSalary,
@@ -188,17 +185,16 @@ Answer:
 
 Module=(function(){
     let name,age,salary;
-
+ let getName = function () {
+        return name; 
+    };
+    let getAge = function () {
+        return age; 
+    };
+    let getSalary = function () {
+        return salary; 
+    };
     return {
-        getName:function () {
-            return name; 
-        },
-        getAge:function () {
-            return age; 
-        },
-        getSalary:function () {
-            return salary; 
-        },
         setName:function (name) {
             this.name=name; 
         },
@@ -255,9 +251,6 @@ Module=(function(){
         let newAge=this.getAge()+1;
         this.setAge(newAge);
     };
-        myObj.getName=getName;
-        myObj.getAge=getAge;
-        myObj.getSalary=getSalary;
         myObj.setName=setName;
         myObj.setAge=setAge;
         myObj.setSalary=setSalary;
