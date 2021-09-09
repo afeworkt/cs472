@@ -274,7 +274,7 @@ Module.setAddress=function(newAddress){
 14. What is the output of the following code?
 const promise = new Promise((resolve, reject) => { reject("Hattori");
 });
-promise.then(val => console.log("Success: " + val)) .catch(e => console.log("Error: " + e));
+promise.then(val =>   alert("Success: " + val)) .catch(e => alert("Error: " + e));
 
 Answer: 
 Error: Hattori
@@ -285,7 +285,7 @@ const promise = new Promise(
         resolve("Hattori");
     setTimeout(()=> reject("Yoshi"), 500); 
 });
-promise.then(val => console.log("Success: " + val)).catch(e => console.log("Error: " + e));
+promise.then(val => alert("Success: " + val)).catch(e => alert("Error: " + e));
 
 Answer: 
 Success: Hattori
