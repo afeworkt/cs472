@@ -15,7 +15,7 @@ document.write(b);
 document.write(x);
 }
 
-Answer: undefined 8 9 10 1
+Answer: undefined 8 8 9 10 1
 ============================================
 
 2. Define Global Scope and Local Scope in Javascript. 
