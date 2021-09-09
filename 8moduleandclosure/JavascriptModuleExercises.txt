@@ -120,6 +120,13 @@ function make_adder(inc) {
 
 9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of these function and variable names will be added to the Global Javascript namespace. What simple modification to the Javascript file can remove all the names from the Global namespace?
 
+Answer:
+(function(){
+
+})();
+
+============================================
+
 10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object with the following fields and methods:
 Private Field: name Private Field: age Private Field: salary
 Public Method: setAge(newAge)
