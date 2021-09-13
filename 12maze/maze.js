@@ -13,13 +13,10 @@ $(document).ready(function () {
     });
 
     $('.boundary').on('mouseenter', function () {
-        if (started) {
-            $('.boundary').toggleClass('youlose');
-            started = false;
-            setTimeout(function () {
-                alert("Sorry, you lose :(");
-            }, 0);
-        }
+        loseCallback();
+    });
+    $('#maze').on('mouseleave', function () {
+        loseCallback();
     });
 
     $('#end').on('mouseenter', function () {
@@ -28,5 +25,13 @@ $(document).ready(function () {
             started = false;
         }
     });
-
+    function loseCallback(){
+        if (started) {
+            $('.boundary').toggleClass('youlose');
+            started = false;
+            setTimeout(function () {
+                alert("Sorry, you lose :(");
+            }, 0);
+        }
+    }
 });
