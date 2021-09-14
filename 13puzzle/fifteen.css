@@ -15,23 +15,20 @@ body, button {
 	margin-right: auto;
 	position: relative;
 }
-/* #puzzlearea div{
-    width: 90px;
-    height: 90px;
-    margin: 0px;
-    padding: 0px;
-     box-sizing: border-box;
-    border: 5px solid black;
-    display: inline-block;
-} */
-
 /* This class should be applied to each of the 15 puzzle pieces. */
 .puzzlepiece {
-	background-image: url(background.jpg);
+	/* background-image: url(background.jpg);
 	border: 5px solid black;
 	width: 90px;
 	height: 90px;
+	position: absolute; */
+    background-image: url(background.jpg);
+	border: 5px solid black;
+	color: rgb(231, 200, 122);
+	font-size: 40pt;
+	height: 90px;
 	position: absolute;
+	width: 90px;
 }
 
 /* This class should be applied to a puzzle piece that can be moved. */
@@ -55,4 +52,3 @@ body, button {
 .invalid {
 	background-color: #f88;
 }
-

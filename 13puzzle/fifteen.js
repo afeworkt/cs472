@@ -1,33 +1,27 @@
-"use strict";
+$(document).ready(function() {
 
-(function() {
-
-  window.addEventListener("load", load);
-  var rows_columns = 4;
-  var empty_x = 3;
-  var empty_y = 3;
-
-  // Calls these functions upon the loading of the page 
-  function load() {
-    drawPuzzle();
-    document.getElementById("shufflebutton").onclick = shuffle;
-  }
-
-  // Creates the puzzle and tiles with their respective numbers and images
-  function drawPuzzle() {
+  const rows_columns = 4;
+  let empty_x = 3;
+  let empty_y = 3;
+  init();
+  $("#shufflebutton").on('click',shuffleButtonClick);
+  //initialize and create the puzzle peices elements
+ function init() {
     var num = 1;
     for (var i = 0; i < rows_columns; i++) {
       for (var j = 0; j < rows_columns; j++) {
+      
+        let content=num++;
         var tile = document.createElement("div");
         tile.classList.add("puzzlepiece");
         tile.style.left = 100 * j + "px";
         tile.style.top = 100 * i + "px"; 
         tile.style.backgroundPosition = (0 - 100 * j) + "px" + " " + (0 - 100 * i) + "px";
-        tile.setAttribute("id", "square" + "_" + j + "_" + i);
-        tile.innerHTML = num++;
+        tile.setAttribute("id", "peice_" + j + "_" + i);
+        tile.innerHTML = content;
         tile.onmouseover = highlight;
         tile.onmouseout = unhighlight;
-        tile.onclick = tileClick;
+        tile.onclick = peiceClick;
         if (i != 3 || j != 3) { 
           document.getElementById("puzzlearea").appendChild(tile);
         }
@@ -35,7 +29,7 @@
     }
   }
 
-  // Checks if a chosen tile is next to the empty one
+  // Check the next move is empty space 
   function validMove(tile) { 
     var neighbors = getNeighbors();
     if (neighbors.indexOf(tile.getAttribute("id")) != -1) {
@@ -45,27 +39,27 @@
     }
   }
 
-  // Highlights the selected tile on mouseover if it's moveable
+  // on mouse event callback
   function highlight() {
     if (validMove(this)) {
-      this.classList.add("highlight");
+      this.classList.add("movablepiece");
     }
   }
 
-  // Unhighlights the moveable, selected tile upon removal of the mouse
+  // on mouseleave event callback
   function unhighlight() {
     if (validMove(this)) {
-      this.classList.remove("highlight");
+      this.classList.remove("movablepiece");
     }
   }
 
-  // Helper function to pass clicked tile to moveTiles
-  function tileClick(){
-    moveTiles(this);
+  // Peice click event handler
+  function peiceClick(){
+    movePeice(this);
   }
 
-  // Swaps the selected tile if it's moveable with the empty tile
-  function moveTiles(tile) {
+  // Swaps the selected peice
+  function movePeice(tile) {
     var tempEX = empty_x;
     var tempEY = empty_y;
     if (validMove(tile)) {
@@ -73,65 +67,36 @@
       empty_y = parseInt(tile.style.top) / 100;
       tile.style.top = 100 * tempEY + "px";
       tile.style.left = 100 * tempEX + "px";
-      tile.setAttribute("id", "square_" + tempEX + "_" + tempEY);
+      tile.setAttribute("id", "peice_" + tempEX + "_" + tempEY);
     }
   }
 
-  // Shuffles the puzzle and places tiles randomly  
-  function shuffle() {   
+  // Shuffles the peices randomly  
+  function shuffleButtonClick() {   
     for (var i = 0; i < 1000; i++) {
       var neighbors = getNeighbors();
       var rand = parseInt(Math.random() * neighbors.length);
       var tile = document.getElementById(neighbors[rand]);
-      moveTiles(tile);
+      movePeice(tile);
     }
   }
 
-  // Checks tiles around selected tile to see if they're empty 
+  // Checks peice around selected tile to see if they're empty 
   function getNeighbors() {
-    var up = "square_" + empty_x + "_" + (empty_y - 1);
-    var down = "square_" + empty_x + "_" + (empty_y + 1);
-    var left = "square_" + (empty_x - 1) + "_" + empty_y;
-    var right = "square_" + (empty_x + 1) + "_" + empty_y;
+    var up = "peice_" + empty_x + "_" + (empty_y - 1);
+    var down = "peice_" + empty_x + "_" + (empty_y + 1);
+    var left = "peice_" + (empty_x - 1) + "_" + empty_y;
+    var right = "peice_" + (empty_x + 1) + "_" + empty_y;
 
-    var tiles = [up, down, left, right];
-    var realTiles = [];
+    var peice = [up, down, left, right];
+    var realpeice = [];
 
-    for (var i = 0; i < tiles.length; i++) {
-      if (document.getElementById(tiles[i]) != null) {
-        realTiles.push(tiles[i]);
+    for (var i = 0; i < peice.length; i++) {
+      if (document.getElementById(peice[i]) != null) {
+        realpeice.push(peice[i]);
       }
     }
-    return realTiles;
+    return realpeice;
   }
 
-})();
-
-// window.onload=function(){
-//   init();
-// }
-
-// init = function() {
-//     var puzzleArea = document.getElementById('puzzlearea');
-//     var divs = puzzleArea.getElementsByTagName("div");
-      
-//     // initialize each piece
-//     for (var i=0; i< divs.length; i++) {
-//         var div = divs[i];
-        
-//         // calculate x and y for this piece
-//         var x = ((i % 4) * 100) ;
-//         var y = (Math.floor(i / 4) * 100) ;
-
-//         // set basic style and background
-//         div.className = "puzzlepiece";
-//         div.style.left = x + 'px';
-//         div.style.top = y + 'px';
-//         div.style.backgroundImage = 'url("background.jpg")';
-//         div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
-        
-//         // store x and y for later
-//         div.x = x;
-//         div.y = y; 
-//     }        
-// };
+});
