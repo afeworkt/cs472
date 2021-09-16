@@ -1,7 +1,8 @@
 "use strict";
 $(document).ready(function () {
     let started = false;
-    $('#start').on('mouseenter', function () {
+    $('#start')
+    .on('mouseenter', function () {
         if (!$(".boundary").first().hasClass('youlose')) {
             started = true;
         }
@@ -31,7 +32,7 @@ $(document).ready(function () {
             started = false;
             setTimeout(function () {
                 alert("Sorry, you lose :(");
-            }, 0);
+            }, 100);
         }
     }
 });
