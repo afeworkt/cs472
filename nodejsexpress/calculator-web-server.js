@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 });
 app.post('/calculate',urlencodedParser, (req, res) => {
     let result = 0;
-    const number1=req.body.number1;
-    const number2=req.body.number2;
+    const number1=parseInt(req.body.number1);
+    const number2=parseInt(req.body.number2);
     const operator=req.body.operator;
 
     if(operator==='/'){
